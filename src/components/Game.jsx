@@ -2,11 +2,24 @@ import { useState } from "react";
 import Scoreboard from "./Scoreboard";
 import Card from "./Card";
 
+function shuffle(array) {
+  const result = [...array];
+
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+
+  return result;
+}
+
 function Game({ items }) {
   const [clickedCards, setClickedCards] = useState([]);
 
   const score = clickedCards.length;
   const [highscore, setHighscore] = useState(0);
+
+  const shuffledItemIds = shuffle(Object.keys(items));
 
   function restart() {
     if (score > highscore) {
@@ -41,7 +54,7 @@ function Game({ items }) {
       </header>
 
       <div id="gameBoard">
-        {Object.keys(items).map((id) => {
+        {shuffledItemIds.map((id) => {
           const { name, image } = items[id];
 
           return (
