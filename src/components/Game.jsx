@@ -55,14 +55,14 @@ function Game({ items }) {
 
       <div id="gameBoard">
         {shuffledItemIds.map((id) => {
-          const { name, image } = items[id];
+          const name = items[id];
 
           return (
             <Card
               onClick={() => addClickedCard(id)}
               key={id}
               name={name}
-              image={image}
+              id={id}
             ></Card>
           );
         })}

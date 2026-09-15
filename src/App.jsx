@@ -2,16 +2,6 @@ import "./App.css";
 
 import Game from "./components/Game";
 
-import { fetchItemImage } from "./api/Items";
-
-// Transformed into
-// {
-//   id: {
-//     name: NAME,
-//     image: URL
-//   }
-// }
-
 const items = {
   pufferfish_bucket: "Bucket of Pufferfish",
   tnt_minecart: "Minecart with TNT",
@@ -30,17 +20,6 @@ const items = {
   netherite_hoe: "Netherite Hoe",
   name_tag: "Name Tag",
 };
-
-for (const id in items) {
-  const name = items[id];
-
-  const blob = await fetchItemImage(id);
-
-  items[id] = {
-    name: name,
-    image: URL.createObjectURL(blob),
-  };
-}
 
 function App() {
   return (
