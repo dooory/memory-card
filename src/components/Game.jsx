@@ -2,6 +2,8 @@ import { useState } from "react";
 import Scoreboard from "./Scoreboard";
 import Card from "./Card";
 
+import "../styles/Game.css";
+
 function shuffle(array) {
   const result = [...array];
 
@@ -47,7 +49,7 @@ function Game({ items }) {
     <main id="game">
       <header>
         <div className="title">
-          <h1>Minecraft Memory Card</h1>
+          <h1>Minecraft Memory Card Game</h1>
         </div>
 
         <Scoreboard score={score} highscore={highscore}></Scoreboard>

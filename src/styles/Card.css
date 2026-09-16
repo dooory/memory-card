@@ -1,0 +1,24 @@
+.card {
+  cursor: pointer;
+  border-radius: 1.5rem;
+  padding: 0.8rem;
+
+  background-color: var(--color-alt-bg);
+}
+
+.card .image {
+  border-radius: 1rem;
+  background-color: var(--color-border);
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card p {
+  font-size: 2rem;
+  color: var(--color-aqua);
+  text-align: center;
+}

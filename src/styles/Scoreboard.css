@@ -1,0 +1,12 @@
+#scoreboard {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-border);
+  color: var(--color-aqua);
+
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+  font-size: 32px;
+}

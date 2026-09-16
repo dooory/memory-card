@@ -1,3 +1,5 @@
+import "../styles/Card.css";
+
 import { useEffect, useState } from "react";
 
 import { fetchItemImage } from "../api/Items";
@@ -20,7 +22,9 @@ function Card({ onClick, name, id }) {
       <div className="image">
         {!image ? "Loading image" : <img src={image} alt={name} />}
       </div>
-      <h2>{name}</h2>
+      <p>
+        <strong>{name}</strong>
+      </p>
     </div>
   );
 }

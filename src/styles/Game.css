@@ -1,0 +1,31 @@
+#game {
+  display: grid;
+  gap: 4rem;
+}
+
+#game header {
+  border-bottom: 6px solid var(--color-text);
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--color-alt-bg);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 16px 32px;
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+#game #gameBoard {
+  padding: 0 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 2rem;
+}
